@@ -1,5 +1,5 @@
 import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
-import charactersReducer from '../slice/characters.slice';
+import charactersReducer from '../slices/characters.slice';
 
 export const store = configureStore({
   reducer: {

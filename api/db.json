@@ -2,7 +2,7 @@
   "characters": [
     {
       "id": 1,
-      "isAlive": false,
+      "isAlive": true,
       "message": "You're all to die!",
       "name": "joffrey",
       "family": "Baratheon",
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "isAlive": false,
+      "isAlive": true,
       "message": "I hit first and ask later",
       "name": "jaime",
       "family": "Lannister",
