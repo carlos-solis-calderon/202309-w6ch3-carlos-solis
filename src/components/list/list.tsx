@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store/characters.store';
 
 export function List() {
-  const { characters } = useSelector(
+  const { characters, charactersRequestState } = useSelector(
     (state: RootState) => state.charactersState
   );
   const { loadCharacters } = useCharacters();
@@ -14,6 +14,12 @@ export function List() {
     loadCharacters();
   }, [loadCharacters]);
 
+  if (charactersRequestState === 'loading') {
+    return <p>Loading...</p>;
+  }
+  if (charactersRequestState === 'error') {
+    return <p>Error loading characters</p>;
+  }
   return (
     <>
       {characters.length > 0 && (
