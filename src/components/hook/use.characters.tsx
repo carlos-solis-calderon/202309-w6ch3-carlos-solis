@@ -26,7 +26,6 @@ export function useCharacters() {
     character: Partial<Character>
   ) => {
     try {
-      //const updatedNote = await repo.setCharacter(id, character);
       dispatch(updateCharacterThunk({ id, repo, updatedCharacter: character }));
     } catch (error) {
       console.log((error as Error).message);
